@@ -1,16 +1,12 @@
-tall = 6
+tall = 5
 
-tall += 1
 endLine = ''
-for lineNr in range(1, tall):
-    # print left part
-    hashes = lineNr
-    spaces = tall - lineNr - 1
+for lineNr in range(1, tall+1):
+    spaces = tall - lineNr
     line = ''
-
     for s in range(spaces):
         line += ' '
-    for h in range(hashes):
+    for leftHash in range(lineNr):
         line += '#'
     for rightHash in range(lineNr - 1):
         line += '#'
